@@ -8,7 +8,7 @@ function SignUp() {
     const [redirect,setRedirect] = useState(false);
     async function signup(ev){
         ev.preventDefault();
-        const response=await fetch('https://pawmate.onrender.com/SignUp',{
+        const response=await fetch('https://pawmate-backend.onrender.com/SignUp',{
             method:'POST',
             body: JSON.stringify({username,password}),
             headers:{'Content-Type':'application/json'},
