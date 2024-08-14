@@ -1,0 +1,29 @@
+
+input {
+    width: 200px; 
+    padding: 10px;
+    margin: 8px;
+    border: 2px solid rgb(54, 47, 47);
+    border-radius: 4px;
+  }
+  .search{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+
+  .search h2{
+    font-size: 30px;
+    color: #987d9a;
+    font-family: 'Poppins',serif;
+  }
+
+  .search label{
+    font-family: 'Nunito',serif;
+    color: #808080;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
