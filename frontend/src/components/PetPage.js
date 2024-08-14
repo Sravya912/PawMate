@@ -8,7 +8,7 @@ function PetPage() {
     const {userInfo} = useContext(UserContext);
     const {id} = useParams();
   useEffect(() => {
-    fetch(`https://pawmate.onrender.com/upload/${id}`,{
+    fetch(`https://pawmate-backend.onrender.com/upload/${id}`,{
       headers:{ 
         "Authorization":"Bearer "+localStorage.getItem("token")
     },
@@ -21,7 +21,7 @@ function PetPage() {
   }, [id]);
 
   const Delete = async () => {
-    const response = await fetch(`https://pawmate.onrender.com/delete/${id}`, {
+    const response = await fetch(`https://pawmate-backend.onrender.com/delete/${id}`, {
       method: 'DELETE',
       headers:{ 
         "Authorization":"Bearer "+localStorage.getItem("token")
@@ -41,7 +41,7 @@ function PetPage() {
     <div className="pet-card">
       <div className="pet-image">
       <h2>{petInfo.name}</h2>
-        <img src={`https://pawmate.onrender.com/${petInfo.cover}`} alt=""/>
+        <img src={`https://pawmate-backend.onrender.com/${petInfo.cover}`} alt=""/>
       </div>
       <div className='pet-details'>
         <p className='owner'><strong>Owner:</strong>{petInfo.owner.username}</p>
