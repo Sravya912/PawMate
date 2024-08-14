@@ -6,7 +6,7 @@ function PetDetails({ pet }) {
     const { cover, _id } = pet;
     return (
         <div className="petCard">
-          <img src={'https://pawmate.onrender.com/' + cover} alt={pet.name} className="petImage" />
+          <img src={'https://pawmate-backend.onrender.com/' + cover} alt={pet.name} className="petImage" />
             <div className="petDetails">
                 <h2 className="petName">{pet.name}</h2>
                 <p className="petBreed"><strong>Breed: </strong> {pet.breed}</p>
