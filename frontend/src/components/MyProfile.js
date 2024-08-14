@@ -14,7 +14,7 @@ function MyProfile() {
 
                 console.log(document.cookie);
                 
-                const res = await fetch('https://pawmate.onrender.com/myPets', {
+                const res = await fetch('https://pawmate-backend.onrender.com/myPets', {
                     method: 'GET',
                     headers: { 'Content-Type': 'application/json' ,
                         "Authorization":"Bearer "+localStorage.getItem("token")
