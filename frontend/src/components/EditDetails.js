@@ -13,7 +13,7 @@ function EditDetails() {
   const [redirect, setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch(`https://pawmate.onrender.com/upload/${id}`,{
+    fetch(`https://pawmate-backend.onrender.com/upload/${id}`,{
       headers:{ 
         "Authorization":"Bearer "+localStorage.getItem("token")
     },
@@ -41,7 +41,7 @@ function EditDetails() {
     data.append('id', id);
     if (files) data.append('file', files);
 
-    const res = await fetch('https://pawmate.onrender.com/upload', {
+    const res = await fetch('https://pawmate-backend.onrender.com/upload', {
       method: 'PUT',
       headers:{ 
         "Authorization":"Bearer "+localStorage.getItem("token")
