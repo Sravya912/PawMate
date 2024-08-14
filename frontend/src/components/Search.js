@@ -36,45 +36,50 @@ function Search() {
 
   return (
     <div>
-    <div className='search'>
-      <h2>Search Pets</h2>
-      <div>
-        <label>
-          Breed Name:
-          <input
-            type="text"
-            value={breed}
-            onChange={(e) => setBreed(e.target.value)}
-          />
-        </label>
-        <label>
-          Place Name:
-          <input
-            type="text"
-            value={place}
-            onChange={(e) => setPlace(e.target.value)}
-          />
-        </label>
-        <label>
-          Gender:
-          <input
-            type="text"
-            value={gender}
-            onChange={(e) => setGender(e.target.value)}
-          />
-        </label>
-        <label>
-          Age:
-          <input
-            type="number"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
-        </label>
+      <div className='search'>
+        <h2>Search Pets</h2>
+        <div>
+          <div>
+            <label>
+              Breed Name:
+              <input
+                type="text"
+                value={breed}
+                onChange={(e) => setBreed(e.target.value)}
+              />
+            </label>
+            <label>
+              Place Name:
+              <input
+                type="text"
+                value={place}
+                onChange={(e) => setPlace(e.target.value)}
+              />
+            </label>
+          </div>
+          <div>
+            <label>
+              Gender:
+              <input
+                type="text"
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+              />
+            </label>
+            <label>
+              Age:
+              <input
+                type="number"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+              />
+            </label>
+          </div>
+        </div>
+        <br/>
+        <button onClick={handleSearch}>Search</button>
       </div>
-      <button onClick={handleSearch}>Search</button>
-      </div>
-
+  
       <div>
         {searched && pets.length === 0 ? (
           <h1 className="no-pets-message">No pets found.</h1>
@@ -86,6 +91,7 @@ function Search() {
       </div>
     </div>
   );
+  
 }
 
 export default Search;
