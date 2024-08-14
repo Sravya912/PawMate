@@ -9,7 +9,7 @@ function Header() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('https://pawmate.onrender.com/profile', {
+    fetch('https://pawmate-backend.onrender.com/profile', {
       headers:{ 
         "Authorization":"Bearer "+localStorage.getItem("token")
     },
@@ -22,7 +22,7 @@ function Header() {
 
   async function Signout() {
     try {
-      const response = await fetch('https://pawmate.onrender.com/SignOut', {
+      const response = await fetch('https://pawmate-backend.onrender.com/SignOut', {
         headers:{ 
           "Authorization":"Bearer "+localStorage.getItem("token")
       },
