@@ -21,7 +21,7 @@ function Search() {
         age,
       }).toString();
 
-      const response = await fetch(`https://pawmate.onrender.com/search?${query}`);
+      const response = await fetch(`https://pawmate-backend.onrender.com/search?${query}`);
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
